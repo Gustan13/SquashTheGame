@@ -13,7 +13,7 @@
 
 @interface SnowSoupDelegate : NSObject <MTKViewDelegate>
 - (void)setEngine:(SnowSoup *)engine;
-//- (void)setView:(MTKView*)view;
+- (void)setView:(NSView*)view;
 @end
 
 #endif /* SnowDelegate_h */
