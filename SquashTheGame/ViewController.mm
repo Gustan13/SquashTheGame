@@ -16,7 +16,17 @@
     _snowDelegate = [SnowSoupDelegate alloc];
     [_snowDelegate setEngine:&_game];
     [_snowDelegate setView:self.view];
-    SnowFiles::getPath(@"monster", @".fbx");
+    
+    [self registerController];
+    
+    NSArray<GCController*>* controllers = [GCController controllers];
+    
+    if (controllers == NULL)
+        return;
+    
+    _myController = controllers.firstObject;
+    _game.myController = controllers.firstObject;
+    _game.registerJumpButton();
 }
 
 
@@ -26,5 +36,29 @@
     // Update the view, if already loaded.
 }
 
+- (void)registerController {
+    NSNotificationCenter* nCenter = [NSNotificationCenter defaultCenter];
+    
+    SEL c = @selector(connectController:);
+    SEL d = @selector(disconnectController:);
+    
+    [nCenter addObserver:self selector:c name:GCControllerDidConnectNotification object:NULL];
+    [nCenter addObserver:self selector:d name:GCControllerDidDisconnectNotification object:NULL];
+}
+
+- (void)connectController:(NSNotification*)notification {
+    NSArray<GCController*>* controllers = [GCController controllers];
+    _myController = controllers.firstObject;
+    _game.myController = _myController;
+    _game.registerJumpButton();
+    NSLog(@"Controller Connected");
+    
+}
+
+- (void)disconnectController:(NSNotification*)notification {
+    _myController = NULL;
+    _game.myController = NULL;
+    NSLog(@"Controller Disconnected");
+}
 
 @end

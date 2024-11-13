@@ -9,11 +9,22 @@
 #define Game_hpp
 
 #import <SnowLib/SnowSoup.hpp>
+#import <SnowLib/Model.hpp>
+#import <SnowLib/SnowFiles.hpp>
+#import <GameController/GameController.h>
 
 class Game : public SnowSoup {
 public:
     void onStart() override;
     void update() override;
+    
+    void registerJumpButton();
+    void registerLeftThumbstick();
+    
+    GCController* myController;
+    GCControllerLiveInput* input;
+    
+    Model* player;
 };
 
 #endif /* Game_hpp */

@@ -6,6 +6,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <GameController/GameController.h>
 #import <SnowLib/SnowDelegate.h>
 #import <SnowLib/SnowFiles.hpp>
 
@@ -14,5 +15,10 @@
 @interface ViewController : NSViewController
 @property Game game;
 @property SnowSoupDelegate* snowDelegate;
+@property GCController* myController;
+
+- (void)registerController;
+- (void)connectController:(NSNotification*)notification;
+- (void)disconnectController:(NSNotification*)notification;
 @end
 
