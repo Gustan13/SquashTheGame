@@ -16,6 +16,8 @@
 		52CFF47D2CE4CE4B0076A208 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFF47C2CE4CE4B0076A208 /* AppKit.framework */; };
 		52CFF47F2CE4CE4F0076A208 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFF47E2CE4CE4F0076A208 /* Metal.framework */; };
 		52CFF4812CE4CE530076A208 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFF4802CE4CE530076A208 /* MetalKit.framework */; };
+		52CFF4842CE4D1890076A208 /* hero.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF4832CE4D1890076A208 /* hero.fbx */; };
+		52CFF4862CE4D4C60076A208 /* monster.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF4852CE4D4C60076A208 /* monster.fbx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		52CFF47C2CE4CE4B0076A208 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		52CFF47E2CE4CE4F0076A208 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		52CFF4802CE4CE530076A208 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		52CFF4832CE4D1890076A208 /* hero.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = hero.fbx; sourceTree = "<group>"; };
+		52CFF4852CE4D4C60076A208 /* monster.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster.fbx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		52CFF4652CE4CD880076A208 /* SquashTheGame */ = {
 			isa = PBXGroup;
 			children = (
+				52CFF4822CE4CFB80076A208 /* Models */,
 				52CFF4662CE4CD880076A208 /* AppDelegate.h */,
 				52CFF4672CE4CD880076A208 /* AppDelegate.mm */,
 				52CFF4692CE4CD880076A208 /* ViewController.h */,
@@ -90,6 +95,15 @@
 				52CFF47A2CE4CE440076A208 /* libSnowLibMacOS.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52CFF4822CE4CFB80076A208 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52CFF4852CE4D4C60076A208 /* monster.fbx */,
+				52CFF4832CE4D1890076A208 /* hero.fbx */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CFF46D2CE4CD890076A208 /* Assets.xcassets in Resources */,
+				52CFF4862CE4D4C60076A208 /* monster.fbx in Resources */,
+				52CFF4842CE4D1890076A208 /* hero.fbx in Resources */,
 				52CFF4702CE4CD890076A208 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
