@@ -18,6 +18,8 @@
 		52CFF4812CE4CE530076A208 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFF4802CE4CE530076A208 /* MetalKit.framework */; };
 		52CFF4842CE4D1890076A208 /* hero.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF4832CE4D1890076A208 /* hero.fbx */; };
 		52CFF4862CE4D4C60076A208 /* monster.fbx in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF4852CE4D4C60076A208 /* monster.fbx */; };
+		52CFF48A2CE4D6780076A208 /* Game.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52CFF4882CE4D6780076A208 /* Game.mm */; };
+		52CFF48D2CE4DA290076A208 /* default.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF48C2CE4DA290076A208 /* default.metallib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		52CFF4802CE4CE530076A208 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		52CFF4832CE4D1890076A208 /* hero.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = hero.fbx; sourceTree = "<group>"; };
 		52CFF4852CE4D4C60076A208 /* monster.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = monster.fbx; sourceTree = "<group>"; };
+		52CFF4882CE4D6780076A208 /* Game.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Game.mm; sourceTree = "<group>"; };
+		52CFF4892CE4D6780076A208 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		52CFF48C2CE4DA290076A208 /* default.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = default.metallib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +78,9 @@
 		52CFF4652CE4CD880076A208 /* SquashTheGame */ = {
 			isa = PBXGroup;
 			children = (
+				52CFF48B2CE4DA0F0076A208 /* ShaderLib */,
 				52CFF4822CE4CFB80076A208 /* Models */,
+				52CFF4872CE4D6620076A208 /* Game */,
 				52CFF4662CE4CD880076A208 /* AppDelegate.h */,
 				52CFF4672CE4CD880076A208 /* AppDelegate.mm */,
 				52CFF4692CE4CD880076A208 /* ViewController.h */,
@@ -104,6 +111,23 @@
 				52CFF4832CE4D1890076A208 /* hero.fbx */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		52CFF4872CE4D6620076A208 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				52CFF4882CE4D6780076A208 /* Game.mm */,
+				52CFF4892CE4D6780076A208 /* Game.hpp */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		52CFF48B2CE4DA0F0076A208 /* ShaderLib */ = {
+			isa = PBXGroup;
+			children = (
+				52CFF48C2CE4DA290076A208 /* default.metallib */,
+			);
+			path = ShaderLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CFF48D2CE4DA290076A208 /* default.metallib in Resources */,
 				52CFF46D2CE4CD890076A208 /* Assets.xcassets in Resources */,
 				52CFF4862CE4D4C60076A208 /* monster.fbx in Resources */,
 				52CFF4842CE4D1890076A208 /* hero.fbx in Resources */,
@@ -180,6 +205,7 @@
 				52CFF46B2CE4CD880076A208 /* ViewController.mm in Sources */,
 				52CFF4722CE4CD890076A208 /* main.mm in Sources */,
 				52CFF4682CE4CD880076A208 /* AppDelegate.mm in Sources */,
+				52CFF48A2CE4D6780076A208 /* Game.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

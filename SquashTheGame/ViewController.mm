@@ -12,7 +12,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view.
+    _game.init((MTKView*)self.view);
+    _snowDelegate = [SnowSoupDelegate alloc];
+    [_snowDelegate setEngine:&_game];
+    [_snowDelegate setView:self.view];
+    SnowFiles::getPath(@"monster", @".fbx");
 }
 
 
