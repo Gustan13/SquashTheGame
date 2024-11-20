@@ -11,15 +11,24 @@
 #import <SnowLib/SnowSoup.hpp>
 #import <SnowLib/Model.hpp>
 #import <SnowLib/SnowFiles.hpp>
+#import <SnowLib/Cube.hpp>
 #import <GameController/GameController.h>
+
+#import "Player.hpp"
+
+typedef enum {
+   TITLE, GAME
+} GameState;
 
 class Game : public SnowSoup {
 public:
     void onStart() override;
     void update() override;
     
+    void titleScreen();
+    void gameScreen();
+    
     void registerJumpButton();
-    void registerLeftThumbstick();
     
     GCController* myController;
     GCControllerLiveInput* input;
@@ -27,9 +36,15 @@ public:
     Model* player;
     Model* enemyModel;
     Model* copyTest;
+    Cube* cube;
+    Player* p;
+    
+    NSTextField* titleUI;
+    NSTextField* startUI;
+    NSTextField* scoreUI;
     
     int timer = 100;
-    bool playing = false;
+    GameState state = GAME;
 };
 
 #endif /* Game_hpp */

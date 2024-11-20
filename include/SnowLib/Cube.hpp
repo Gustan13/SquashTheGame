@@ -28,8 +28,8 @@ public:
     MTL::Buffer* normalBuffer;
     MTL::Buffer* texvtxBuffer;
     
-    simd_float3 color = {
-        1.f, 0.f, 0.f
+    simd_float4 color = {
+        1.f, 0.f, 0.f, 1.f
     };
     
     float s = 0.5f;

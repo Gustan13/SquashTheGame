@@ -30,6 +30,7 @@ class Renderer
 public:
     Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders, MTKView* view );
     ~Renderer();
+    void            destroyMarkedNodes(Node* sceneTree);
     void            drawSetup( MTKView* view );
     void            initDraw( MTKView* view );
     void            draw( MTKView* view, Node* sceneTree );

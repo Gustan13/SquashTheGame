@@ -30,6 +30,7 @@ class Model : public Transform {
 public:
     Model(MTL::Device* device);
     Model(Model& model);
+    ~Model();
     void importModel(const std::string filename);
     void importTexture(const char* filepath);
     void renderTL(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders);
