@@ -25,6 +25,11 @@ public:
     GCControllerLiveInput* input;
     
     Model* player;
+    Model* enemyModel;
+    Model* copyTest;
+    
+    int timer = 100;
+    bool playing = false;
 };
 
 #endif /* Game_hpp */
