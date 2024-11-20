@@ -14,6 +14,7 @@
 class MeshNode : public Transform {
 public:
     MeshNode();
+    ~MeshNode();
     MeshNode(MeshNode& meshNode, MTL::Device* device);
     Mesh** meshes = nullptr;
     matrix_float4x4 transformation, localTransformation, rotationMatrix;

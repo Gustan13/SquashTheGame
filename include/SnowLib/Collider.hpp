@@ -24,6 +24,7 @@ public:
         setCubeColor(1.f, 0.f, 0.f);
         scale = vector3(2.f,2.f,2.f);
     };
+    ~Collider();
     
     simd_float3 color;
     

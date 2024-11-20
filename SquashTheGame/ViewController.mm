@@ -9,6 +9,10 @@
 
 @implementation ViewController
 
+- (IBAction)HideButton:(NSButton *)sender {
+    _game.p->isVisible = !_game.p->isVisible;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -19,6 +23,10 @@
     
     [self registerController];
     
+    _game.titleUI = self.view.subviews[0];
+    _game.startUI = self.view.subviews[1];
+    _game.scoreUI = self.view.subviews[2];
+
     NSArray<GCController*>* controllers = [GCController controllers];
     
     if (controllers == NULL)

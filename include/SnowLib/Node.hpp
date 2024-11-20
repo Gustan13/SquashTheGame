@@ -23,10 +23,14 @@ public:
     bool isTransform = false;
     bool isCollider = false;
     bool isPrimitive = false;
+    bool destroy = false;
+    bool isVisible = true;
     
     Node();
+    ~Node();
     
     void AddChild(Node* child);
+    void RemoveChildReference(Node *child);
     virtual void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders );
     virtual void Update();
 };

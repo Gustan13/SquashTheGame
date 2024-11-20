@@ -21,6 +21,7 @@
 		52CFF48A2CE4D6780076A208 /* Game.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52CFF4882CE4D6780076A208 /* Game.mm */; };
 		52CFF48D2CE4DA290076A208 /* default.metallib in Resources */ = {isa = PBXBuildFile; fileRef = 52CFF48C2CE4DA290076A208 /* default.metallib */; };
 		52CFF48F2CE4E6270076A208 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CFF48E2CE4E6270076A208 /* GameController.framework */; };
+		52DDC0A12CEE7C3600664120 /* Player.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52DDC09F2CEE7C3600664120 /* Player.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		52CFF4892CE4D6780076A208 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		52CFF48C2CE4DA290076A208 /* default.metallib */ = {isa = PBXFileReference; lastKnownFileType = "archive.metal-library"; path = default.metallib; sourceTree = SOURCE_ROOT; };
 		52CFF48E2CE4E6270076A208 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		52DDC09F2CEE7C3600664120 /* Player.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Player.mm; sourceTree = "<group>"; };
+		52DDC0A02CEE7C3600664120 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				52CFF48B2CE4DA0F0076A208 /* ShaderLib */,
+				52DDC0992CEE4FB700664120 /* Images */,
 				52CFF4822CE4CFB80076A208 /* Models */,
 				52CFF4872CE4D6620076A208 /* Game */,
 				52CFF4662CE4CD880076A208 /* AppDelegate.h */,
@@ -122,6 +126,8 @@
 			children = (
 				52CFF4882CE4D6780076A208 /* Game.mm */,
 				52CFF4892CE4D6780076A208 /* Game.hpp */,
+				52DDC09F2CEE7C3600664120 /* Player.mm */,
+				52DDC0A02CEE7C3600664120 /* Player.hpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -132,6 +138,13 @@
 				52CFF48C2CE4DA290076A208 /* default.metallib */,
 			);
 			path = ShaderLib;
+			sourceTree = "<group>";
+		};
+		52DDC0992CEE4FB700664120 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +223,7 @@
 				52CFF4722CE4CD890076A208 /* main.mm in Sources */,
 				52CFF4682CE4CD880076A208 /* AppDelegate.mm in Sources */,
 				52CFF48A2CE4D6780076A208 /* Game.mm in Sources */,
+				52DDC0A12CEE7C3600664120 /* Player.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
